@@ -13,22 +13,22 @@ function createData(name, trackingId, date, status) {
 }
 
 const rows = [
-  createData("Lasania Chiken Fri", 18908424, "2 March 2022", "Approved"),
-  createData("Big Baza Bang ", 18908424, "2 March 2022", "Pending"),
-  createData("Mouth Freshner", 18908424, "2 March 2022", "Approved"),
-  createData("Cupcake", 18908421, "2 March 2022", "Delivered"),
+  createData("Lasanha", 18908424, "2 Março 2020", "Aprovado"),
+  createData("X-tudo ", 18908424, "2 Abril 2021", "Pendente"),
+  createData("Café", 18908424, "2 Julho 2022", "Aprovado"),
+  createData("Cupcake", 18908421, "2 Agosto 2023", "Entregue"),
 ];
 
 
 const makeStyle=(status)=>{
-  if(status === 'Approved')
+  if(status === 'Aprovado')
   {
     return {
       background: 'rgb(145 254 159 / 47%)',
       color: 'green',
     }
   }
-  else if(status === 'Pending')
+  else if(status === 'Pendente')
   {
     return{
       background: '#ffadad8f',
@@ -46,7 +46,7 @@ const makeStyle=(status)=>{
 export default function BasicTable() {
   return (
       <div className="Table">
-      <h3>Recent Orders</h3>
+      <h3>Pedidos Recentes</h3>
         <TableContainer
           component={Paper}
           style={{ boxShadow: "0px 13px 20px 0px #80808029" }}
@@ -54,9 +54,9 @@ export default function BasicTable() {
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell>Product</TableCell>
-                <TableCell align="left">Tracking ID</TableCell>
-                <TableCell align="left">Date</TableCell>
+                <TableCell>Produtos</TableCell>
+                <TableCell align="left">ID rastreamento</TableCell>
+                <TableCell align="left">Data</TableCell>
                 <TableCell align="left">Status</TableCell>
                 <TableCell align="left"></TableCell>
               </TableRow>
